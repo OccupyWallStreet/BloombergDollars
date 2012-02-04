@@ -1,4 +1,6 @@
 body {
+  margin:0px;
+  padding:0px;
   font-family:Helvetica, arial, sans-serif;
   background: #f0f0f0;
   color:#333;
@@ -9,6 +11,14 @@ body {
 }
 #header {
   text-align:center;
+}
+
+#ows {
+  background:#ffcc00;
+  color:#000;
+  font-weight:bold;
+  text-transform:uppercase;
+  padding:15px;
 }
 
 
