@@ -29,6 +29,9 @@ h1 {
   height:50px;
   background-color:#009933;
   margin-right:100px;
+  background:url("../img/marker.png");
+  background-color:#009933;
+
 }
 
 .milemarker {
@@ -49,4 +52,20 @@ h1 {
 } 
 .milemarker a:hover {
   text-decoration:underline;
+}
+a.keepgoing:link,
+a.keepgoing:visited {
+  font-size:.8em;
+  padding-left:20px;
+  color:#e0e0e0;
+}
+div.left {
+}
+img.dollar {
+}
+div.center {
+  text-align:center;
+}
+img.bloombuck {
+  margin-left:60px;
 }

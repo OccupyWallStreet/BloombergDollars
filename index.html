@@ -1,11 +1,17 @@
 <html>
   <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/scrollTo/jquery.scrollTo.js"></script>
+
+    <script type="text/javascript" src="js/scrollTo/jquery.localscroll.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+
   </head>
 <body>
 <div id="site">
   <div id="header" class="container">
-    <h1>How much is BLOOMBERG DOLLAR worth?</h1>
+    <h1>How much is $250,000 in BloombergBucks?</h1>
   </div>
   
   <div class="container">
@@ -33,47 +39,83 @@
     <h2>This is $19,000,000,000 </h2>
     <h4>(that's 19 billion dollars - it's about how much Mike Bloomberg is worth.)</h4>
     <div class="bargraph" style="width:1900000px">
-      <div class="milemarker" style="left:100px">
+      <div class="milemarker" style="left:99px">
         &larr; (this is a million dollars btw)
       </div>
       <div class="milemarker" style="left:700">
-        &larr; (this is what it cost for <a href="http://blogs.villagevoice.com/runninscared/2011/11/occupy_protests.php">Bloomberg's Army to monitor and evict the Liberty Park occupation)</a>.
+        &larr;</a> (this is what it cost for <a href="http://blogs.villagevoice.com/runninscared/2011/11/occupy_protests.php" class="fact" target="_blank">Bloomberg's Army to monitor and evict the Liberty Park occupation)</a>.
+        <a href="#two" class="keepgoing" class="keepgoing">keep going &rarr;</a>
       </div>
       
-      <div class="milemarker" style="left:5100">
-        &larr; (this is the operating budget of the <a href="http://en.wikipedia.org/wiki/New_York_Public_Library">NY Public Library</a>)
+      <div class="milemarker" style="left:5100" id="two">
+          &larr; (this is the operating budget of the <a href="http://en.wikipedia.org/wiki/New_York_Public_Library" class="fact" target="_blank">NY Public Library</a>)
+              <a href="#three" class="keepgoing">keep going &rarr;</a>
+    
       </div>
 
-      <div class="milemarker" style="left:8800px">
-        &larr; (this is the  <a href="http://www.dailymail.co.uk/news/article-2076017/Ekaterina-Rybolovleva-22-buys-88m-New-York-apartment.html"> most expensive mansion in NYC</a>)
+      <div class="milemarker" style="left:8800px" id="three">
+        &larr; (this is the  <a href="http://www.dailymail.co.uk/news/article-2076017/Ekaterina-Rybolovleva-22-buys-88m-New-York-apartment.html" class="fact" target="_blank"> most expensive mansion in NYC</a>)
+            <a href="#four" class="keepgoing">keep going &rarr;</a>
+
       </div>
       
-      <div class="milemarker" style="left:260000px">
-        &larr; (this would pay the <a href="http://drummajorinstitute.org/library/report.php?ID=149">MTA's budget deficit</a> until 2014)
+      <div class="milemarker" style="left:260000px" id="four">
+        &larr; (this would pay the <a href="http://drummajorinstitute.org/library/report.php?ID=149" class="fact" target="_blank">MTA's budget deficit</a> until 2014)
+            <a href="#five" class="keepgoing">keep going &rarr;</a>
+
       </div>
 
       
 
 
-      <div class="milemarker" style="left:1170000px">
-        &larr; (this is the cost of a <a href="http://www.naval-technology.com/projects/cvn-21/">new aircraft carrier</a>)
+      <div class="milemarker" style="left:1170000px" id="five">
+        &larr; (this is the cost of a <a href="http://www.naval-technology.com/projects/cvn-21/" class="fact" target="_blank">new aircraft carrier</a>)
+            <a href="#six" class="keepgoing">keep going &rarr;</a>
+        
       </div>
 
-      <div class="milemarker" style="left:1520000px">
-        &larr; (this is the <a href="http://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&met_y=ny_gdp_mktp_cd&idim=country:HND&dl=en&hl=en&q=gdp+of+honduras">GDP of Honduras</a>)
+      <div class="milemarker" style="left:1520000px" id="six">
+        &larr; (this is the <a href="http://www.google.com/publicdata/explore?ds=d5bncppjof8f9_&met_y=ny_gdp_mktp_cd&idim=country:HND&dl=en&hl=en&q=gdp+of+honduras" class="fact" target="_blank">GDP of Honduras</a>)
+            <a href="#seven" class="keepgoing">keep going &rarr;</a>
+        
       </div>
-      <div class="milemarker" style="left:1896750; border: none">
+      <div class="milemarker" style="left:1896050; border: none" id="seven">
         Ah, here's Mike Bloomberg, worth 19.2 billion dollars as of 2011. &rarr;
+        <div id="back" style="margin-top:50px; text-align:right">
+          <h2><a href="#eight" class="goback" style="color:#333">&larr; go back</a></h2>
+          
+        </div>
+        
+      
       </div>
+      
+      
     </div>
     <h3>Scroll to the right to see exactly how it compares &rarr;
   </div>  
+
+  <div class="container">
+    <h3 >For Mayor Bloomberg, $250,000 is literally pocket change.  With a <a href="http://www.forbes.com/lists/2009/54/rich-list-09_Michael-Bloomberg_C610.html" target="_blank">net worth</a> around 19 billion dollars, Bloomberg is America's wealthiest politician and one of the wealthiest people in America, ranked as high as #8 in recent years.  The <a href="http://www.opensecrets.org/news/assets_c/2011/08/WealthChart-6092.html">median net worth</a> (income, property, investments) of an American family on the other hand is about $96,000.</h3> 
+    <h2 id="eight">That's a ratio of 197,916 to 1.</h2>
+    <div class="center">
+      <img src="img/comparison.jpg"/>
+    </div>
+    
+      <h3>So for every one dollar you have, Bloomberg would have about 200,000 - you can say that a Bloomberg Buck is a unit of currency worth about 200,000 normal US dollars.</h3>
+    <h3>A  house in Park Slope, worth about 2.5 million American dollars, would cost about $12.50 in Bloomberg Bucks.  An <a href="http://www.yale.edu/printer/bulletin/htmlfiles/art/tuition-fees-general-expenses.html">Ivy League education</a> could be paid for with about 60 Bloomberg cents.  A new laptop, worth about $2,000 could be purchased for a Bloomberg Penny.   Loaning your friend $5 isn't a big deal, and if you had Bloomberg Bucks, that five-spot would be like loaning a friend $2,000,000.</h3>  
+    <h3>See where we're going with this?  Mike Bloomberg donating $250,000 to Planned Parenthood for breast cancer screening would be like you donating about 1 dollar and 63 cents - literally pocket change.  It's not nothing, but it's not exactly front-page news.  Which leads us to ask, why not just donate the full <i>Three Bloomberg Bucks</i> and pay off all of the money that Planned Parenthood is going to lose from the Komen Foundation? Why, if providing breast cancer screening for every American only costs us about $30 per year, are we even having trouble coming up with the money at all?</h3>
+  </div>
+
 </div>
     
+<script type="text/javascript">
 
+      $(document).ready(function(){
+        $("#site").localScroll();
+      })    
+</script>
 
 </body>
 
 </html>
 
-197916.67 american dollars = 1 bloomberg dollar
