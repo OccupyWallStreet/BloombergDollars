@@ -79,3 +79,21 @@ div.center {
 img.bloombuck {
   margin-left:60px;
 }
+.social {
+  text-align:right;
+  margin:15px;
+  width:100%;
+  margin-left:90%;
+}
+.tweet, .fb-share {
+  float:left;
+  text-align:center;
+  padding:8px;
+  background-color:#ffcc00;
+  width:80px;
+  margin-right:15px;
+  -moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px;
+	-khtml-radius: 5px;
+	border-radius: 5px;
+}
