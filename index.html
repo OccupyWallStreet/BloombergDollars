@@ -50,13 +50,13 @@
         
         <div class="gridbox alpha shadow">
           <h2><span class="mw-headline" id="intro">200,000X Wealthier Than the Average US Family</span></h2>
-          <p class="intro">Mike Bloomberg is valued at $197,916 for every $1 the average person is. So, something that would be <strong>worth $1 to Mike Bloomberg</strong> would be <strong>worth just under $200,000 to you</strong>.</p>
+          <p class="intro">For every dollar in your wallet, Mike Bloomberg has $197,916. In other words, something that would be <strong>worth $1 to Mike Bloomberg</strong> would be <strong>worth just under $200,000 to you</strong>.</p>
           
           <img src="images/coins.png" alt="coins" width="226" height="259" align="left" />
           
           <blockquote>200,000 times wealthier than the average American</blockquote>
           
-          <p>With a net worth around 19 billion dollars, <strong>Bloomberg is America's wealthiest politician</strong> and one of the wealthiest people in America, ranked as high as #8 in recent years. The median net worth (income, property, investments) of an American family on the other hand is about $96,000.</p>
+          <p>With a <a href="http://www.forbes.com/lists/2009/54/rich-list-09_Michael-Bloomberg_C610.html">net worth</a> around 19 billion dollars, <strong>Bloomberg is America's wealthiest politician</strong> and one of the wealthiest people in America, ranked as high as #8 in recent years. The <a href="http://www.opensecrets.org/news/assets_c/2011/08/WealthChart-6092.html">median net worth</a> (income, property, investments) of an American family on the other hand is about $96,000.</p>
           <p></p>
           <h2 style="clear:both;"><span class="mw-headline" id="intro">How Much Does It Cost?</span></h2>
           <p class="intro">This is how much things cost in Bloomberg Bucks:</p>
@@ -65,12 +65,12 @@
 		          <tr>
 			          <th></th>
 			          <th>(&#65284;) Cost in USD</th>
-			          <th>(&#3647;) Cost in Bloomberg Dollars</th>
+			          <th>(&#3647;) Cost in Bloomberg Bucks</th>
 		          </tr>
 	          </thead>
 	          <tbody>
 		          <tr>
-			          <th>Contribution to Planned Parenthood</th>
+			          <th><a href="http://cityroom.blogs.nytimes.com/2012/02/02/bloomberg-to-give-250000-to-planned-parenthood/">Contribution to Planned Parenthood</a></th>
 			          <td>$250,000</td>
 			          <td>$12.50</td>
 		          </tr>
@@ -80,7 +80,7 @@
 			          <td>66¢</td>
 		          </tr>
 		          <tr>
-			          <th>Fancy New Laptop</th>
+			          <th><a href="http://store.apple.com/us/configure/MD318LL/A?">Fancy New Laptop</a></th>
 			          <td>$2,000</td>
 			          <td>1¢</td>
 		          </tr>
@@ -90,7 +90,7 @@
 			          <td>$35</td>
 		          </tr>
 		          <tr>
-			          <th>Running for Mayor (3 times!)</th>
+			          <th><a href="http://www.nytimes.com/2009/11/28/nyregion/28spending.html">Running for Mayor</a> (3 times!)</th>
 			          <td>$261,000,000</td>
 			          <td>$1,318</td>
 		          </tr>
@@ -123,11 +123,11 @@
 								$('input').blur(function() {
 								var dollars = $('#usd_amt').val()	
 								var bloombucks = $('#exchange_rate').val()	
-								var total = dollars * bloombucks;
+								var total = ((Math.round((dollars * bloombucks)*100))/100).toFixed(2);
 									if (!isNaN(total)) {
 									$('#total').attr('value', total)
 									} else {
-									alert('O0ps Error! Please only numbers')
+									alert("O0ps Error! Please only numbers. Who needs letters when you're this rich!?")
 									}
 							});	
 							</script>
@@ -168,7 +168,7 @@
 			</script>
         
   <div id="footer" class="">
-    <p>Brought to you by New York General Assembly <a href="http://tech.nycga.net/" target="_blank">Technology Operations Group</a><br /></p>
+    <p>Brought to you by the Occupy Wall Street <a href="http://tech.nycga.net/" target="_blank">Technology Operations Group</a><br /></p>
   </div><!--/pagewrapper-->
   
 </div><!--/footer-->
