@@ -72,7 +72,7 @@
 		          <tr>
 			          <th><a href="http://cityroom.blogs.nytimes.com/2012/02/02/bloomberg-to-give-250000-to-planned-parenthood/">Contribution to Planned Parenthood</a></th>
 			          <td>$250,000</td>
-			          <td>$12.50</td>
+			          <td>$1.25</td>
 		          </tr>
 		          <tr>
 			          <th><a href="http://www.yale.edu/printer/bulletin/htmlfiles/art/tuition-fees-general-expenses.html" target="_blank">Ivy League education</a></th>
@@ -113,21 +113,28 @@
           <div class="calculator grid_6">
               <h2>Calculator</h2>
 							<ul>
-								<li><label for="usd_amt">Enter Amount <input type="text" id="usd_amt" size="15" /></label>
+								<li><label for="usd_amt">Enter Amount in US Dollars<br/><input type="text" id="usd_amt" size="15" /></label><br/>
 								<input type="text" id="exchange_rate" value=".00000505" hidden /></li>
-								<li><label>Bloomberg Bucks $<input type="text" id="total" size="15" /></label></li>
+								<li><label>Bloomberg Bucks <br/><div id="total" size="15" />$<span id="amount"></span></div></li>
 							</ul>
 							
 							<script>
-							$('#total').css('font-weight', 'bold')
-								$('input').blur(function() {
-								var dollars = $('#usd_amt').val()	
-								var bloombucks = $('#exchange_rate').val()	
+							function numberWithCommas(x) {
+                  return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
+              }
+								$('#usd_amt').keyup(function() {
+                /*
+                if ($('#usd_amt')).val()[0]!="$") {
+                  $('#usd_amt').val("$"+$('#usd_amt')).val())
+                }
+                */
+								var dollars = $('#usd_amt').val().replace(",","").replace("$","");
+								var bloombucks = $('#exchange_rate').val();
 								var total = ((Math.round((dollars * bloombucks)*100))/100).toFixed(2);
 									if (!isNaN(total)) {
-									$('#total').attr('value', total)
+									  $('#amount').html(numberWithCommas(total));
 									} else {
-									alert("O0ps Error! Please only numbers. Who needs letters when you're this rich!?")
+									//alert("Oops Error! Please only numbers. Who needs letters when you're this rich!?")
 									}
 							});	
 							</script>

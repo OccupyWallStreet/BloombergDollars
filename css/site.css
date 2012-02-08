@@ -424,3 +424,25 @@ input, button { margin-left: 1em; }
 		border-top-color: rgba(20,20,20,0.92);
 	}
 }
+
+
+
+#usd_amt {
+  font-size:18px;
+  padding:4px;
+  width:216px;
+  text-align:right;
+  margin:10px 0px 10px 0px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.08);
+   -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.08);
+   -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.08);
+   border-radius: 5px;
+}
+
+#total {
+  font-size:18px;
+  font-weight:bold;
+  text-align:right;
+  margin:10px 0px 10px 0px;
+  
+}
