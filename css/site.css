@@ -402,12 +402,13 @@ input, button { margin-left: 1em; }
 #leaderboard td {
 	font-family: "Casio fx-7800GC";
 	color: red;
+	font-size:16px;
 	text-align: right;
 	vertical-align: middle;
 }
 
 #leaderboard th {
-	font-size: 1.1em;
+	font-size: 14px;
 	text-transform: uppercase;
 }
 

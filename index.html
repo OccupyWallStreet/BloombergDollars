@@ -12,6 +12,9 @@
 	<script type="text/javascript" src="js/boxShadow.js"></script>
 	<script type="text/javascript" src="js/jquery.tipTip.minified.js"></script>
 	<script type="text/javascript" src="js/site.js"></script>
+  <script type="text/javascript" src="js/scrollTo/jquery.scrollTo.js"></script>
+  <script type="text/javascript" src="js/scrollTo/jquery.localscroll.js"></script>
+  <script type="text/javascript" src="js/init.js"></script>
 
 <title>Occupy Wall Street | How Much Does It Cost in Bloomberg Bucks?</title>
       <meta property="og:title" content="How Much Does It Cost in Bloomberg Bucks?"/>
@@ -19,7 +22,6 @@
       <meta property="og:url" content="http://occupywallstreet.net/bloombergbucks"/>
       <meta property="og:image" content="http://occupywallstreet.net/bloombergbucks/images/bloombuck.png"/>
       <meta property="og:description" content="Occupy Wall Street does the math to show how much things cost when you're as rich as Mike Bloomberg"/>
-      
       <script type="text/javascript">var switchTo5x=true;</script>
 			<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 			<script type="text/javascript">stLight.options({publisher: "ur-8bfe9527-d81f-9ef5-7f07-82102445e5"}); </script>
@@ -54,7 +56,7 @@
           
           <img src="images/coins.png" alt="coins" width="226" height="259" align="left" />
           
-          <blockquote>200,000 times wealthier than the average American</blockquote>
+          <blockquote>200,000 times wealthier <br/>than the average American</blockquote>
           
           <p>With a <a href="http://www.forbes.com/lists/2009/54/rich-list-09_Michael-Bloomberg_C610.html">net worth</a> around 19 billion dollars, <strong>Bloomberg is America's wealthiest politician</strong> and one of the wealthiest people in America, ranked as high as #8 in recent years. The <a href="http://www.opensecrets.org/news/assets_c/2011/08/WealthChart-6092.html">median net worth</a> (income, property, investments) of an American family on the other hand is about $96,000.</p>
           <p></p>
@@ -70,9 +72,9 @@
 	          </thead>
 	          <tbody>
 		          <tr>
-			          <th><a href="http://cityroom.blogs.nytimes.com/2012/02/02/bloomberg-to-give-250000-to-planned-parenthood/">Contribution to Planned Parenthood</a></th>
+			          <th><a href="http://cityroom.blogs.nytimes.com/2012/02/02/bloomberg-to-give-250000-to-planned-parenthood/" target="_blank">Contribution to Planned Parenthood</a></th>
 			          <td>$250,000</td>
-			          <td>$1.25</td>
+			          <td>&#3647;1.25</td>
 		          </tr>
 		          <tr>
 			          <th><a href="http://www.yale.edu/printer/bulletin/htmlfiles/art/tuition-fees-general-expenses.html" target="_blank">Ivy League education</a></th>
@@ -87,18 +89,24 @@
 		          <tr>
 			          <th><a href="http://blogs.villagevoice.com/runninscared/2011/11/occupy_protests.php" target="_blank">Harassing and Evicting Occupy Wall Street</a></th>
 			          <td>$7,000,000</td>
-			          <td>$35</td>
+			          <td>&#3647;35</td>
 		          </tr>
 		          <tr>
-			          <th><a href="http://www.nytimes.com/2009/11/28/nyregion/28spending.html">Running for Mayor</a> (3 times!)</th>
+			          <th><a href="http://www.nytimes.com/2009/11/28/nyregion/28spending.html" target="_blank">Running for Mayor</a> (3 times!)</th>
 			          <td>$261,000,000</td>
-			          <td>$1,318</td>
+			          <td>&#3647;1,318</td>
 		          </tr>
 		          <tr>
-			          <th><a href="http://council.nyc.gov/html/budget/PDFs/2012/dhs_071.pdf">Advantage Program</a><br />
+			          <th><a href="http://www.dominionofnewyork.com/2012/02/08/nypd-forced-to-pay-15-million-for-illegally-arresting-22000/#.TzQs7OOXQh8" target="_blank">Wrongfully Arresting 22,000 People</a></th>
+			          <td>$15,000,000</td>
+			          <td>&#3647;75.59</td>
+		          </tr>
+              
+		          <tr>
+			          <th><a href="http://council.nyc.gov/html/budget/PDFs/2012/dhs_071.pdf" target="_blank">Advantage Program</a><br />
 			          Rent Assistance for Previously Homeless People (for 1 year)</th>
 			          <td>$206,800,000</td>
-			          <td>$1,044</td>
+			          <td>&#3647;1,044</td>
 		          </tr>
 	          </tbody>
           
@@ -118,27 +126,6 @@
 								<li><label>Bloomberg Bucks <br/><div id="total" size="15" />$<span id="amount"></span></div></li>
 							</ul>
 							
-							<script>
-							function numberWithCommas(x) {
-                  return x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
-              }
-								$('#usd_amt').keyup(function() {
-                /*
-                if ($('#usd_amt')).val()[0]!="$") {
-                  $('#usd_amt').val("$"+$('#usd_amt')).val())
-                }
-                */
-								var dollars = $('#usd_amt').val().replace(",","").replace("$","");
-								//var bloombucks = $('#exchange_rate').val();
-								var bloombucks = 1/197916;
-								var total = ((Math.round((dollars * bloombucks)*100))/100).toFixed(2);
-									if (!isNaN(total)) {
-									  $('#amount').html(numberWithCommas(total));
-									} else {
-									//alert("Oops Error! Please only numbers. Who needs letters when you're this rich!?")
-									}
-							});	
-							</script>
 
           </div><!--/logistics grid_6-->
           
@@ -168,11 +155,13 @@
 	  
 	    <!--google plus-->
 			<script type="text/javascript">
+      /*
 			  (function() {
 			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
 			    po.src = 'https://apis.google.com/js/plusone.js';
 			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 			  })();
+*/
 			</script>
         
   <div id="footer" class="">
