@@ -129,7 +129,8 @@
                 }
                 */
 								var dollars = $('#usd_amt').val().replace(",","").replace("$","");
-								var bloombucks = $('#exchange_rate').val();
+								//var bloombucks = $('#exchange_rate').val();
+								var bloombucks = 1/197916;
 								var total = ((Math.round((dollars * bloombucks)*100))/100).toFixed(2);
 									if (!isNaN(total)) {
 									  $('#amount').html(numberWithCommas(total));
