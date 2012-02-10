@@ -33,6 +33,7 @@ h1, h2, h3, h4{ font-family: 'OSPDIN', Arial, sans-serif; font-weight: normal; }
 h1{ font-size: 5em; }
 h2{ font-size: 3.5em; }
 h3{ font-size: 2.5em; }
+
 /* -------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
@@ -447,3 +448,103 @@ input, button { margin-left: 1em; }
   margin:10px 0px 10px 0px;
   
 }
+
+
+/*
+Bar Graph Styles
+
+*/
+
+#content {
+  overflow:auto;
+}
+#scrolling {
+  width:19000px;
+}
+.container {
+  background-color:#f8f8f8;
+  margin-bottom:30px;
+  padding:30px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.08);
+}
+
+.container h2 {
+  background:transparent;
+  font-size:18px;
+  line-height:24px;
+}
+.container h4{ font-size: 1.5em; }
+
+
+.bargraph {
+  height:50px;
+  background-color:#009933;
+  margin-right:100px;
+  background:url("../images/marker.png");
+  background-color:#009933;
+
+}
+
+.milemarker {
+  border-left:2px #fff solid;
+  height:20px;
+  padding:15px;
+  color:#fff;
+  position: relative;
+  float:left;
+}
+
+.milemarker a:link, 
+.milemarker a:hover,
+.milemarker a:visited, 
+.milemarker a:active {
+  color:#ffff00;
+  text-decoration:none;
+} 
+.milemarker a:hover {
+  text-decoration:underline;
+}
+a.keepgoing:link,
+a.keepgoing:visited {
+  font-size:1.0em;
+  padding-left:20px;
+  color:#f0f0f0;
+}
+
+.keepgoing .big {
+  font-size:2.0em;
+}
+div.left {
+}
+img.dollar {
+}
+div.center {
+  text-align:center;
+}
+img.bloombuck {
+  margin-left:60px;
+}
+.social {
+  text-align:right;
+  margin:15px;
+  width:100%;
+  margin-left:90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
