@@ -13,7 +13,8 @@ jQuery(function( $ ){
 	$.localScroll.hash({
 		target: '#content', // Could be a selector or a jQuery object too.
 		queue:true,
-		duration:1500
+		duration:2000,
+		easing:'swing'
 	});
 
 	/**
@@ -23,8 +24,9 @@ jQuery(function( $ ){
 	$.localScroll({
 		target: '#content', // could be a selector or a jQuery object too.
 		queue:true,
-		duration:1000,
+		duration:2500,
 		hash:true,
+		easing:'easeInOutExpo',
 		onBefore:function( e, anchor, $target ){
 			// The 'this' is the settings object, can be modified
 		},
@@ -44,7 +46,11 @@ $(document).ready(function(){
 		var bloombucks = 1/197916;
 		var total = ((Math.round((dollars * bloombucks)*100))/100).toFixed(2);
 			if (!isNaN(total)) {
-			  $('#amount').html(numberWithCommas(total));
+			  if (total > 0){
+  			  $('#amount').html(numberWithCommas(total));
+			  } else {
+			    $('#amount').html("Too Small to Measure");
+			  }
 			} else {
 			}
     }
@@ -52,10 +58,14 @@ $(document).ready(function(){
     		var dollars = $('#usd_amt').val().replace(/,/g,"").replace("$","");
     		var bloombucks = 1/197916;
     		var total = ((Math.round((dollars * bloombucks)*100))/100).toFixed(2);
-    			if (!isNaN(total)) {
-    			  $('#amount').html(numberWithCommas(total));
-    			} else {
-    	    }
+  			if (!isNaN(total)) {
+  			  if (total > 0.01){
+    			  $('#amount').html("&#3647;"+numberWithCommas(total));
+  			  } else {
+  			    $('#amount').html("Less than a Penny");
+  			  }
+  			} else {
+  			}
     	});	
     	
 
